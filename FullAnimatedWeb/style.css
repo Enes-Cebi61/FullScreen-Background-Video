@@ -1,0 +1,69 @@
+/* Apply styles to all elements, resetting padding, margin, and using the 'Poppins' font */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/* Style for the container that holds the background video and content */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the content inside the container */
+.content {
+    text-align: center;
+}
+
+/* Style for the main heading inside the content */
+.content h1 {
+    font-size: 95px;
+    color: #fff; /* White text color */
+    margin-bottom: 50px;
+}
+
+/* Style for the link inside the content */
+.content a {
+    font-size: 23px;
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border: 2px solid #fff; /* White border */
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the link */
+.content a:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text color on hover */
+}
+
+/* Style for the background video */
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Responsive styling for the background video based on aspect ratio */
+@media (min-aspect-ratio: 16/9) {
+    .background-clip {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .background-clip {
+        width: auto;
+        height: 100%;
+    }
+}
